@@ -16,7 +16,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps){
             <Offcanvas.Header closeButton>
                 <Offcanvas.Title>Cart</Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
+            <Offcanvas.Body> 
                 <Stack gap={3}>
                     {cartItems.map(item => ( 
                     <CartItem key={item.id} {...item} />))}
@@ -26,7 +26,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps){
                             const item = storeItems.find(i => i.id == cartItem.id)
                             return total + ( item?.price || 0) * cartItem.quantity
                         }, 0)
-                    )}
+                     )}
                     </div>
                 </Stack>
             </Offcanvas.Body>
